@@ -4,8 +4,12 @@ const balance = (state = 0 , action ) => {
   switch(action.type){
     case constants.SET_BALANCE:
       return action.balance;
+    case constants.DEPOSITE:
+      return state + action.deposite;
+    case constants.WITHDRAW:
+      return state - action.withdraw;
     default:
-      return balance;
+      return state;
   }
 }
 
